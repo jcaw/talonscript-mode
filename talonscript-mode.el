@@ -38,7 +38,7 @@
    ;; Matches variables in spoken form - doesn't match them elsewhere
    ;;
    ;; TODO: Match all occurrences of the variable.
-   (cons "<\\([-a-zA-Z0-9_]+\\)>" '(0 font-lock-constant-face t))
+   (cons "<\\([-a-zA-Z0-9_.]*\\)>" '(0 font-lock-constant-face t))
 
    ;; Matches keys that are function calls, e.g will match "action" in:
    ;; action(edit.zoom_in): key(ctrl-+)
