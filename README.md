@@ -1,5 +1,5 @@
 <h1 align=center>TalonScript-Mode</h1>
-<p align=center>Major mode for interacting with .talon files from <a href=https://talonvoice.com/>Talon Voice</a>.</p>
+<p align=center>Major mode for interacting with `.talon` files from <a href=https://talonvoice.com/>Talon Voice</a>.</p>
 
 <p align=center>(At the time of writing, .talon files are newapi only.)</p>
 
