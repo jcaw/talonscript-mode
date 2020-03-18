@@ -9,7 +9,7 @@ This is currently a simple major mode. It just adds syntax highlighting and comm
 
 ## Installation & Usage
 
-For now, clone this repo directly, make sure it's on the load-path, then:
+For now, clone this repo directly, make sure it's on the `load-path`, then:
 
 ```emacs-lisp
 (require 'talonscript-mode)
