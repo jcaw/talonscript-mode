@@ -9,6 +9,12 @@ This is currently a simple major mode. It just adds syntax highlighting and comm
 
 ## Usage
 
-For now, clone this repo directly, make sure it's on the load-path, then `(require 'talonscript-mode)`. `.talon` files will open in `talonscript-mode`. 
+For now, clone this repo directly, make sure it's on the load-path, then:
+
+```emacs-lisp
+(require 'talonscript-mode)
+```
+
+`.talon` files will automatically open in `talonscript-mode`. 
 
 Down the line I intend to add [Quelpa](https://github.com/quelpa/quelpa) compatibility, and I'll probably eventually get it on [MELPA](https://melpa.org/).
