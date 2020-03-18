@@ -32,7 +32,11 @@
   (list
    ;; Matches speech commands at the start of a line, but NOT actions.
    ;; Excludes actions by disallowing parens next to letters.
-   (cons "^\\([(]?\\([]a-zA-Z0-9[<> .|)]\\|\\([^-a-zA-Z0-9_](\\)\\)*\\):"
+   ;;
+   ;; It's difficult to stop this highlighting left-hand expressions before the
+   ;; divider (-). It's easier to let it highlight those with the same format,
+   ;; so we tolerate variable syntax too.
+   (cons "^\\([(]?\\([]a-z-A-Z0-9[<> ._|)]\\|\\([^-a-zA-Z0-9_](\\)\\)*\\):"
          '(1 font-lock-function-name-face))
 
    ;; Matches variables in spoken form - doesn't match them elsewhere
