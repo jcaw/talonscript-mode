@@ -17,4 +17,4 @@ For now, clone this repo directly, make sure it's on the load-path, then:
 
 `.talon` files will automatically open in `talonscript-mode`. 
 
-Down the line I intend to add [Quelpa](https://github.com/quelpa/quelpa) compatibility, and I'll probably eventually get it on [MELPA](https://melpa.org/).
+Down the line I intend to add [Quelpa](https://github.com/quelpa/quelpa) compatibility but it won't work right now. I'll probably eventually get it on [MELPA](https://melpa.org/).
