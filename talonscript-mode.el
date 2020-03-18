@@ -32,7 +32,7 @@
   (list
    ;; Matches speech commands at the start of a line, but NOT actions.
    ;; Excludes actions by disallowing parens next to letters.
-   (cons "^\\([(]?\\([]a-zA-Z0-9[<> |)]\\|\\([^-a-zA-Z0-9_](\\)\\)*\\):"
+   (cons "^\\([(]?\\([]a-zA-Z0-9[<> .|)]\\|\\([^-a-zA-Z0-9_](\\)\\)*\\):"
          '(1 font-lock-function-name-face))
 
    ;; Matches variables in spoken form - doesn't match them elsewhere
