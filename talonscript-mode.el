@@ -44,6 +44,9 @@
    ;; TODO: Match all occurrences of the variable.
    (cons "<\\([-a-zA-Z0-9_.]*\\)>" '(0 font-lock-constant-face t))
 
+   ;; Matches references to variables in strings (and lists on left-hand side).
+   (cons "{\\([-a-zA-Z0-9_.]*\\)}" '(0 font-lock-constant-face t))
+
    ;; Matches keys that are function calls, e.g will match "action" in:
    ;; action(edit.zoom_in): key(ctrl-+)
    (cons "^\\([a-zA-Z0-9_-.]*\\)(" '(1 font-lock-type-face t))
