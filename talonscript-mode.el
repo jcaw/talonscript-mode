@@ -39,6 +39,11 @@
    (cons "^\\([(]?\\([]a-z-A-Z0-9[<>{} ._|)]\\|\\([^-a-zA-Z0-9_](\\)\\)*\\):"
          '(1 font-lock-function-name-face))
 
+   ;; Matches the start & end anchors (^ and $)
+   ;;
+   ;; FIXME: This will also highlight $ and ^ in keypresses.
+   (cons "[$^]" '(0 font-lock-type-face t))
+
    ;; Matches variables in spoken form - doesn't match them elsewhere
    ;;
    ;; TODO: Match all occurrences of the variable.
