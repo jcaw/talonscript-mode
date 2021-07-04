@@ -36,7 +36,7 @@
    ;; It's difficult to stop this highlighting left-hand expressions before the
    ;; divider (-). It's easier to let it highlight those with the same format,
    ;; so we tolerate variable syntax too.
-   (cons "^\\([(]?\\([]a-z-A-Z0-9[<>{} ._|)]\\|\\([^-a-zA-Z0-9_](\\)\\)*\\):"
+   (cons "^\\([^]?[(]?\\([]a-z-A-Z0-9[<>{} ._|)]\\|\\([^-a-zA-Z0-9_](\\)\\)*\\)[$]?[ \t]*:"
          '(1 font-lock-function-name-face))
 
    ;; Matches the start & end anchors (^ and $)
