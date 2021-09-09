@@ -30,14 +30,14 @@
 
 (defconst talonscript-font-lock-definitions
   (list
-   ;; Matches speech commands at the start of a line, but NOT actions.
-   ;; Excludes actions by disallowing parens next to letters.
-   ;;
-   ;; It's difficult to stop this highlighting left-hand expressions before the
-   ;; divider (-). It's easier to let it highlight those with the same format,
-   ;; so we tolerate variable syntax too.
-   (cons "^\\(\\^?[(]?\\([]a-z-A-Z0-9[<>{} ._|)]\\|\\([^-a-zA-Z0-9_](\\)\\)*\\)[$]?[ \t]*:"
-         '(1 font-lock-function-name-face))
+   ;; To find speech commands, we look for unindented lines, and match the part
+   ;; before the first colon. However, we exclude action/settings/tag blocks by
+   ;; disallowing parens next to alphanumerics. It's difficult to stop this from
+   ;; also highlighting left-hand expressions before the divider (-), so we
+   ;; don't bother.
+   (cons
+    "^\\([^[:space:]]\\(?:[^(\n]\\|[^-a-zA-Z0-9_.\n](\\)*\\):"
+    '(1 font-lock-function-name-face))
 
    ;; Matches the start & end anchors (^ and $)
    ;;
@@ -54,7 +54,7 @@
 
    ;; Matches keys that are function calls, e.g will match "action" in:
    ;; action(edit.zoom_in): key(ctrl-+)
-   (cons "^\\([a-zA-Z0-9_-.]*\\)(" '(1 font-lock-type-face t))
+   (cons "^\\([-a-zA-Z0-9_.]*\\)(" '(1 font-lock-type-face t))
 
    ;; Matches function references
    ;; (cons "\\(\\([-a-zA-Z0-9_](\\)\\|:\\)[ \t]*\\([-a-zA-Z0-9_.]+\\)"
@@ -93,7 +93,7 @@ recognition."
   (modify-syntax-entry ?# "<" talonscript-mode-syntax-table)
   (modify-syntax-entry ?\n ">" talonscript-mode-syntax-table)
   (setq-local comment-start "# ")
-  (setq-local comment-start-skip "#+[\t ]*")
+  (setq-local comment-start-skip "#+[[:blank:]]*")
   ;; TODO: Convenient indentation
   ;; (setq-local indent-line-function 'talonscript-toggle-indent)
   )
