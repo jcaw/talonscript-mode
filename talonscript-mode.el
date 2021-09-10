@@ -36,7 +36,7 @@
    ;; also highlighting left-hand expressions before the divider (-), so we
    ;; don't bother.
    (cons
-    "^\\([^[:space:]]\\(?:[^(\n]\\|[^-a-zA-Z0-9_.\n](\\)*\\):"
+    "^\\(\\(?:\\^(\\|[^[:blank:]]\\)\\(?:[^(\n]\\|[^-a-zA-Z0-9_.\n](\\)*?\\):"
     '(1 font-lock-function-name-face))
 
    ;; Matches the start & end anchors (^ and $)
