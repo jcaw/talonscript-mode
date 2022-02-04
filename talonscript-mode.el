@@ -1,4 +1,4 @@
-;;; talonscript-mode.el --- Major mode for Talon Voice's .talon files.  -*- lexical-binding: t; -*-
+;;; talonscript-mode.el --- Major mode for Talon Voice's .talon files  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020 Jcaw
 
