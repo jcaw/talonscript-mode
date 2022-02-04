@@ -5,6 +5,7 @@
 ;; Author: Jcaw <toastedjcaw@gmail.com>
 ;; Keywords: languages
 ;; URL: https://github.com/jcaw/talonscript-mode
+;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
