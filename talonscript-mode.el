@@ -4,6 +4,7 @@
 
 ;; Author: Jcaw <toastedjcaw@gmail.com>
 ;; Keywords: languages
+;; Version: 1.0.0
 ;; URL: https://github.com/jcaw/talonscript-mode
 ;; Package-Requires: ((emacs "24.3"))
 
