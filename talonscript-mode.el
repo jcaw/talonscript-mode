@@ -36,7 +36,11 @@
    ;; also highlighting left-hand expressions before the divider (-), so we
    ;; don't bother.
    (cons
-    "^\\(\\(?:\\^(\\|[^[:blank:]]\\)\\(?:[^(\n]\\|[^-a-zA-Z0-9_.\n](\\)*?\\):"
+    (rx line-start
+        (group (or (not blank) "^(")
+               (*? (or (not (in "(\n"))
+                       (seq (not (any alnum "-_.\n")) "("))))
+        ":")
     '(1 font-lock-function-name-face))
 
    ;; Matches the start & end anchors (^ and $)
