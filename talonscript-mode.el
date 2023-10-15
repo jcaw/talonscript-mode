@@ -95,6 +95,8 @@ recognition."
   (setq-local require-final-newline t)
   (modify-syntax-entry ?# "<" talonscript-mode-syntax-table)
   (modify-syntax-entry ?\n ">" talonscript-mode-syntax-table)
+  ;; FIXME: This breaks key(#) keybind - it will highlight after the "#" with
+  ;;   comment syntax
   (setq-local comment-start "# ")
   (setq-local comment-start-skip "#+[\t ]*")
   ;; TODO: Convenient indentation
